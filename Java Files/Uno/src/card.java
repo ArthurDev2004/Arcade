@@ -14,12 +14,10 @@ public class Card {
         System.out.printf("{%s|%s}", color, symbol);
     }
 
-// this is another comment
 /*
 example: {G|01} to represent a Green 1 card
          {X|W4} to represent a Wild +4 card
          {B|S!} to represent a Blue Skip Card
          {Y|R>} to represent a Yellow Reverse Card
 */
-        //made this edit
 }
