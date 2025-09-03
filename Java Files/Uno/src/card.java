@@ -1,17 +1,29 @@
 public class Card {
 
-    String color;   // (G)reen (B)lue (Y)ellow (R)ed (X)Black
+    String color;   // (G)reen, (B)lue, (Y)ellow, (R)ed, (B)lack
     String symbol;  //  sd
 
+
+    // for Colored cards
     public Card(String color, String symbol){
         this.color = color;
         this.symbol = symbol;
-
     }
 
+    // for Black cards that don't technically have a color
+    public Card(String symbol){
+        this.color = "Black";
+        this.symbol = symbol;
+    }
 
     public void printCard(){
-        System.out.printf("{%s|%s}", color, symbol);
+
+        if(color == "Black"){
+            System.out.printf("{X|%s}", symbol);
+            return;
+        }
+
+        System.out.printf("{%s|%s}", color.charAt(0), symbol);
     }
 
 /*
