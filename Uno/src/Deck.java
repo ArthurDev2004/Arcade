@@ -6,6 +6,20 @@ public class Deck {
     
     public Deck(){
         cards = new ArrayList<>();
+    }
+
+    public void addCard(Card card){
+        cards.add(card);
+    }
+
+    public void printDeck(){
+        for(Card card : cards){
+            card.printCard();
+            System.out.print("\n");
+        }
+    }
+
+    public void initializeUnoDeck(){
         String[] colors = {"Red", "Blue", "Green", "Yellow"};  // Red, Blue, Green, Yellow
         String[] numbers = {"1","2","3","4","5","6","7","8","9"};
         String[] symbols = {"Ø", "«", "-"}; // skip, reverse, draw 2
@@ -52,14 +66,8 @@ public class Deck {
         }
 
         Collections.shuffle(cards);
-
     }
 
-    public void printDeck(){
-        for(Card card : cards){
-            card.printCard();
-            System.out.print("\n");
-        }
-    }
+
     
 }
